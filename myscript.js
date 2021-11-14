@@ -26,7 +26,7 @@ function playround(choice) {
     if (choice == 'rock') {
         rock.setAttribute('style', 'background-color: green;');
         if (rando == 0) {
-            computerimg.setAttribute('src', 'images/rock.png');
+            computerimg.setAttribute('src', './images/rock.png');
             contain.appendChild(tieer);
             tieer.addEventListener("click", () => {
                 rock.removeAttribute('style', 'background-color');
@@ -35,7 +35,7 @@ function playround(choice) {
                 tieer.remove();
             });
         } else if (rando == 1) {
-            computerimg.setAttribute('src', 'images/paper.png');
+            computerimg.setAttribute('src', './images/paper.png');
             contain.appendChild(loser);
             c += 1;
             computerscore.textContent = c;
@@ -46,7 +46,7 @@ function playround(choice) {
                 loser.remove();
             });
         } else {
-            computerimg.setAttribute('src', 'images/scissors.png');
+            computerimg.setAttribute('src', './images/scissors.png');
             contain.appendChild(winner);
             p += 1;
             playerscore.textContent = p;
@@ -60,7 +60,7 @@ function playround(choice) {
     } else if (choice == 'paper') {
         paper.setAttribute('style', 'background-color: green;');
         if (rando == 0) {
-            computerimg.setAttribute('src', 'images/rock.png');
+            computerimg.setAttribute('src', './images/rock.png');
             contain.appendChild(winner);
             p += 1;
             playerscore.textContent = p;
@@ -71,7 +71,7 @@ function playround(choice) {
                 winner.remove();
             });
         } else if (rando == 1) {
-            computerimg.setAttribute('src', 'images/paper.png');
+            computerimg.setAttribute('src', './images/paper.png');
             contain.appendChild(tieer);
             tieer.addEventListener("click", () => {
                 rock.removeAttribute('style', 'background-color');
@@ -80,7 +80,7 @@ function playround(choice) {
                 tieer.remove();
             });
         } else {
-            computerimg.setAttribute('src', 'images/scissors.png');
+            computerimg.setAttribute('src', './images/scissors.png');
             contain.appendChild(loser);
             c += 1;
             computerscore.textContent = c;
@@ -95,7 +95,7 @@ function playround(choice) {
     } else if (choice == 'scissors') {
         scissors.setAttribute('style', 'background-color: green;');
         if (rando == 0) {
-            computerimg.setAttribute('src', 'images/rock.png');
+            computerimg.setAttribute('src', './images/rock.png');
             contain.appendChild(loser);
             c += 1;
             computerscore.textContent = c;
@@ -106,7 +106,7 @@ function playround(choice) {
                 loser.remove();
             });
         } else if (rando == 1) {
-            computerimg.setAttribute('src', 'images/paper.png');
+            computerimg.setAttribute('src', './images/paper.png');
             contain.appendChild(winner);
             p += 1;
             playerscore.textContent = p;
@@ -117,7 +117,7 @@ function playround(choice) {
                 winner.remove();
             });
         } else {
-            computerimg.setAttribute('src', 'images/scissors.png');
+            computerimg.setAttribute('src', './images/scissors.png');
             contain.appendChild(tieer);
             tieer.addEventListener("click", () => {
                 rock.removeAttribute('style', 'background-color');
