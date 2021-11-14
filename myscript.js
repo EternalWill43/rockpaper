@@ -12,7 +12,7 @@ winner.textContent = "NICE U WON";
 const contain = document.querySelector('.container');
 const loser = document.createElement('div');
 loser.setAttribute('class', 'winning');
-loser.textContent = "YOU LOSE, RETARD";
+loser.textContent = "YOU LOSE, SUCKER";
 const tieer = document.createElement('div');
 tieer.setAttribute('class', 'winning');
 tieer.textContent = "IT'S A TIE";
@@ -33,7 +33,7 @@ function playround(choice) {
                 paper.removeAttribute('style', 'background-color');
                 scissors.removeAttribute('style', 'background-color');
                 tieer.remove();
-            });
+            }, {once: true});
         } else if (rando == 1) {
             computerimg.setAttribute('src', './images/paper.png');
             contain.appendChild(loser);
@@ -44,7 +44,7 @@ function playround(choice) {
                 paper.removeAttribute('style', 'background-color');
                 scissors.removeAttribute('style', 'background-color');
                 loser.remove();
-            });
+            }, {once: true});
         } else {
             computerimg.setAttribute('src', './images/scissors.png');
             contain.appendChild(winner);
@@ -55,7 +55,7 @@ function playround(choice) {
                 paper.removeAttribute('style', 'background-color');
                 scissors.removeAttribute('style', 'background-color');
                 winner.remove();
-            });
+            }, {once: true});
         }
     } else if (choice == 'paper') {
         paper.setAttribute('style', 'background-color: green;');
@@ -69,7 +69,7 @@ function playround(choice) {
                 paper.removeAttribute('style', 'background-color');
                 scissors.removeAttribute('style', 'background-color');
                 winner.remove();
-            });
+            }, {once: true});
         } else if (rando == 1) {
             computerimg.setAttribute('src', './images/paper.png');
             contain.appendChild(tieer);
@@ -78,7 +78,7 @@ function playround(choice) {
                 paper.removeAttribute('style', 'background-color');
                 scissors.removeAttribute('style', 'background-color');
                 tieer.remove();
-            });
+            }, {once: true});
         } else {
             computerimg.setAttribute('src', './images/scissors.png');
             contain.appendChild(loser);
@@ -89,7 +89,7 @@ function playround(choice) {
                 paper.removeAttribute('style', 'background-color');
                 scissors.removeAttribute('style', 'background-color');
                 loser.remove();
-            });
+            }, {once: true});
         }
 
     } else if (choice == 'scissors') {
@@ -104,7 +104,7 @@ function playround(choice) {
                 paper.removeAttribute('style', 'background-color');
                 scissors.removeAttribute('style', 'background-color');
                 loser.remove();
-            });
+            }, {once: true});
         } else if (rando == 1) {
             computerimg.setAttribute('src', './images/paper.png');
             contain.appendChild(winner);
@@ -115,7 +115,7 @@ function playround(choice) {
                 paper.removeAttribute('style', 'background-color');
                 scissors.removeAttribute('style', 'background-color');
                 winner.remove();
-            });
+            }, {once: true});
         } else {
             computerimg.setAttribute('src', './images/scissors.png');
             contain.appendChild(tieer);
@@ -124,7 +124,7 @@ function playround(choice) {
                 paper.removeAttribute('style', 'background-color');
                 scissors.removeAttribute('style', 'background-color');
                 tieer.remove();
-            });
+            }, {once: true});
         }
     }
 }
